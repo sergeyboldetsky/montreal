@@ -17,10 +17,23 @@
             <div class="container sixteen columns">
                 <header class="header">
                     <div class="header-logo">
-                        <img class="header-logo__img" src="images/logo.png" alt="Logo">
+                        <a href="/"><img class="header-logo__img" src="images/logo.png" alt="Logo">
+                        </a>
                     </div>
                     <div class="header-menu">
-                        <img src="images/path.png">
+                        <div class="menu-block">
+                            <nav class="menu-nav">
+                              <a href="#">Главная</a>
+                              <a href="#">Портфолио</a>
+                              <a href="#">О себе</a>
+                              <a href="#">Контакты</a>
+                            </nav>
+                            
+                            <a href="#" class="menu-btn">
+                              <span></span>
+                            </a>
+                            
+                          </div>
                     </div>
                 </header>
                 <section class="top-block">
@@ -101,8 +114,8 @@
                 <div class="skill-box">
                     <div class="skill-box__card">
                         <img src="images/shape-7.png" class="skill-box__card-img">
-                        <span class="skill-box__card-number">
-                            345
+                        <span class="skill-box__card-number" data-num="345">
+                            0
                         </span>
                         <p class="skill-box__card-text">
                             COMPLETED PROJECTS
@@ -110,8 +123,8 @@
                     </div>
                     <div class="skill-box__card">
                         <img src="images/shape-4.png" class="skill-box__card-img">
-                        <span class="skill-box__card-number">
-                            988
+                        <span class="skill-box__card-number" data-num="988">
+                            0
                         </span>
                         <p class="skill-box__card-text">
                             COMPLETED PROJECTS
@@ -119,8 +132,8 @@
                     </div>
                     <div class="skill-box__card">
                         <img src="images/shape-5.png" class="skill-box__card-img">
-                        <span class="skill-box__card-number">
-                            35
+                        <span class="skill-box__card-number" data-num="35">
+                            0
                         </span>
                         <p class="skill-box__card-text">
                             COMPLETED PROJECTS
@@ -128,8 +141,8 @@
                     </div>
                     <div class="skill-box__card">
                         <img src="images/shape-6.png" class="skill-box__card-img">
-                        <span class="skill-box__card-number">
-                            48
+                        <span class="skill-box__card-number"  data-num="48">
+                            0
                         </span>
                         <p class="skill-box__card-text">
                             COMPLETED PROJECTS
@@ -335,5 +348,14 @@
            navText:0
        })
        </script>
+
+       <script>
+           $('.menu-btn').on('click', function(e) {
+            e.preventDefault();
+            $(this).toggleClass('menu-btn_active');
+            $('.menu-nav').toggleClass('menu-nav_active');
+            });
+       </script>
+       <script src="/js/numcount.js"></script>
 </body>
 </html>
